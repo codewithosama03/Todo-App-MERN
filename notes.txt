@@ -1,0 +1,70 @@
+mern-task-manager/
+│
+├── backend/                # Node + Express + MongoDB
+│   ├── config/
+│   │   └── db.js           # MongoDB connection
+│   │
+│   ├── models/
+│   │   └── Task.js         # Mongoose schema
+│   │
+│   ├── controllers/
+│   │   └── taskController.js  # Logic (CRUD)
+│   │
+│   ├── routes/
+│   │   └── taskRoutes.js   # API routes
+│   │
+│   ├── .env               # Environment variables
+│   ├── server.js          # Entry point
+│   └── package.json
+│
+├── frontend/              # React + Tailwind
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── TaskCard.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   └── Home.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js     # axios/fetch calls
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   ├── index.html
+│   └── package.json
+│
+└── README.md
+
+
+Frontend (React UI)
+        ↓ (HTTP request)
+Backend (Node + Express API)
+        ↓
+Controller (logic)
+        ↓
+Model (schema)
+        ↓
+Database (MongoDB Atlas)
+
+
+1. Request comes from frontend/Postman
+        ↓
+2. server.js → sees /tasks
+        ↓
+3. routes/taskRoutes.js
+        ↓
+4. controller (createTask)
+        ↓
+5. model (Task)
+        ↓
+6. MongoDB stores data
+        ↓
+7. Response sent back
+
+
+Routes → WHERE
+Controllers → WHAT
+Models → HOW DATA LOOKS
+Server → CONNECTS EVERYTHING
+Database → STORES DATA

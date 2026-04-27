@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import taskRoutes from "./routes/taskRoutes.js";
+// import Task from "../models/task.js";
 
 // Loads variables from .env into your app
 dotenv.config();

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/tasks";
+const BASE_URL = "https://todo-app-mern-4w5e.onrender.com/tasks";
 
 // GET tasks
 export const getTasks = async () => {
